@@ -1,4 +1,3 @@
-//UC-4 using switch case
 //UC-4 solve using switch case
 
 class EmpWageComputationUc4{
