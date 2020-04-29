@@ -1,5 +1,5 @@
 import java.util.*;
-//UC-5 Calculate monthly_wage
+//UC-6 Calculate monthly_wage till 100hrs
 
 //data class to store daily wages
 class Data{
@@ -9,27 +9,25 @@ class Data{
 		this.day=day;
 		this.daily_wage=daily_wage;
 	}
-	
 }
 
 //employee class with main method:
 class Employee{
-	
 	//creating a collection:Arraylist to store daily wage
 	ArrayList<Data> WageData=new ArrayList<Data>();
-	
-	void addWage(String day,int daily_wage){  
+
+	void addWage(String day,int daily_wage){
 		Data d=new Data(day,daily_wage);
 		WageData.add(d);
 	}
 	void printDailyWage(){
-		Iterator itr=WageData.iterator();  
-		while(itr.hasNext()){ 
+		Iterator itr=WageData.iterator();
+		while(itr.hasNext()){
 			Data data=(Data)itr.next();
-			System.out.println(data.day+":"+data.daily_wage);  
+			System.out.println(data.day+":"+data.daily_wage);
 		}
 	}
-	
+
    public static void main(String[] args){
     int wage_per_hr=20;
     int full_day_hr=8;
@@ -40,12 +38,13 @@ class Employee{
     int total_work_day=20;
     int total_wage=0;
     int daily_wage=0;
+	int work_hrs=0;
+	int total_work_hrs=100;
 	String day="";
 	//creating employee object
 	Employee emp=new Employee();
-	
     System.out.println("Welcome to Employee wage computation program");
-    while(day_count<total_work_day){
+    while(day_count <= total_work_day && work_hrs < total_work_hrs){
         double attCheck=Math.random();
         if(attCheck>0.5){
             emp_status="present";
@@ -69,6 +68,7 @@ class Employee{
 						day="day"+day_count;
 						emp.addWage(day,daily_wage);
                         day_count++;
+						work_hrs+=8;
                         break;
                      case "part_time":
                         System.out.println("Employee is present on day"+day_count+" and is a part time");
@@ -78,6 +78,7 @@ class Employee{
 						day="day"+day_count;
 						emp.addWage(day,daily_wage);
                         day_count++;
+						work_hrs+=4;
                         break;
                   }
             case "absent":
@@ -87,10 +88,13 @@ class Employee{
 			   day="day"+day_count;
 			   emp.addWage(day,daily_wage);
                day_count++;
+			   work_hrs+=0;
             break;
         }//switch
       }//while
 	  emp.printDailyWage();
       System.out.println("monthly_wage="+total_wage);
+	  System.out.println("work_hrs="+work_hrs);
+	  
    }//main
 }//class
