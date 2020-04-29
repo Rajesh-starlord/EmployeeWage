@@ -1,7 +1,7 @@
 //UC-4 using switch case
 //UC-4 solve using switch case
 
-class EmpWageComputationUc3{
+class EmpWageComputationUc4{
    public static void main(String[] args)throws Exception{
       int wage_per_hr=20;
       int full_day_hr=8;
