@@ -1,7 +1,7 @@
 import java.util.*;
-//UC-5 Calculate monthly_wage
-
-//data class to store daily wages
+/*UC-5 Calculate monthly_wage
+*data class to store daily wages
+*/
 class Data{
 	String day;
 	int daily_wage;
@@ -66,8 +66,8 @@ class Employee{
                         daily_wage=(wage_per_hr*full_day_hr);
                         System.out.println("daily_wage="+daily_wage);
                         total_wage=(total_wage+daily_wage);
-						day="day"+day_count;
-						emp.addWage(day,daily_wage);
+						            day="day"+day_count;
+						            emp.addWage(day,daily_wage);
                         day_count++;
                         break;
                      case "part_time":
@@ -75,22 +75,22 @@ class Employee{
                         daily_wage=(wage_per_hr*half_day_hr);
                         System.out.println("daily_wage="+daily_wage);
                         total_wage=(total_wage+daily_wage);
-						day="day"+day_count;
-						emp.addWage(day,daily_wage);
+						            day="day"+day_count;
+						            emp.addWage(day,daily_wage);
                         day_count++;
                         break;
                   }
             case "absent":
-               System.out.println("Employee is absent on day"+day_count);
-               System.out.println("daily_wage="+(wage_per_hr*0));
-			   daily_wage=0;
-			   day="day"+day_count;
-			   emp.addWage(day,daily_wage);
-               day_count++;
+                System.out.println("Employee is absent on day"+day_count);
+                System.out.println("daily_wage="+(wage_per_hr*0));
+			          daily_wage=0;
+			          day="day"+day_count;
+			          emp.addWage(day,daily_wage);
+                day_count++;
             break;
         }//switch
       }//while
-	  emp.printDailyWage();
+	    emp.printDailyWage();
       System.out.println("monthly_wage="+total_wage);
    }//main
 }//class
