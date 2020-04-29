@@ -38,11 +38,11 @@ class Employee{
     int total_work_day=20;
     int total_wage=0;
     int daily_wage=0;
-	int work_hrs=0;
-	int total_work_hrs=100;
-	String day="";
-	//creating employee object
-	Employee emp=new Employee();
+    int work_hrs=0;
+    int total_work_hrs=100;
+    String day="";
+    //creating employee object
+    Employee emp=new Employee();
     System.out.println("Welcome to Employee wage computation program");
     while(day_count <= total_work_day && work_hrs < total_work_hrs){
         double attCheck=Math.random();
@@ -65,36 +65,35 @@ class Employee{
                         daily_wage=(wage_per_hr*full_day_hr);
                         System.out.println("daily_wage="+daily_wage);
                         total_wage=(total_wage+daily_wage);
-						day="day"+day_count;
-						emp.addWage(day,daily_wage);
+			day="day"+day_count;
+			emp.addWage(day,daily_wage);
                         day_count++;
-						work_hrs+=8;
+			work_hrs+=8;
                         break;
                      case "part_time":
                         System.out.println("Employee is present on day"+day_count+" and is a part time");
                         daily_wage=(wage_per_hr*half_day_hr);
                         System.out.println("daily_wage="+daily_wage);
                         total_wage=(total_wage+daily_wage);
-						day="day"+day_count;
-						emp.addWage(day,daily_wage);
+			day="day"+day_count;
+			emp.addWage(day,daily_wage);
                         day_count++;
-						work_hrs+=4;
+			work_hrs+=4;
                         break;
                   }
             case "absent":
                System.out.println("Employee is absent on day"+day_count);
                System.out.println("daily_wage="+(wage_per_hr*0));
-			   daily_wage=0;
-			   day="day"+day_count;
-			   emp.addWage(day,daily_wage);
+	       daily_wage=0;
+	       day="day"+day_count;
+	       emp.addWage(day,daily_wage);
                day_count++;
-			   work_hrs+=0;
+	       work_hrs+=0;
             break;
         }//switch
       }//while
-	  emp.printDailyWage();
+      emp.printDailyWage();
       System.out.println("monthly_wage="+total_wage);
-	  System.out.println("work_hrs="+work_hrs);
-	  
+      System.out.println("work_hrs="+work_hrs);	  
    }//main
 }//class
