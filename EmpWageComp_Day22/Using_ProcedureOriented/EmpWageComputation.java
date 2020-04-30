@@ -58,6 +58,10 @@ class EmpWageComputation{
 		System.out.println("========================");
 		System.out.println("monthly_wage="+total_wage);
 		System.out.println("total_work_hrs="+work_hrs);
+		day_count=1;  
+		total_wage=0;
+		daily_wage=0;
+		work_hrs=0;
 	}//function
 	
 	//main method

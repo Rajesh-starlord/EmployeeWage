@@ -54,35 +54,35 @@ class EmployeeWage{
 					}
 					switch(emp_type){
 						case "full_time":
-							if (work_hrs <= 92 ){
-								System.out.println("Employee is present and is a full time");
+							if (work_hrs <= (totalWorkHrs-8) ){
+								System.out.println("Employee is present and is a full time on day"+day_count);
 								daily_wage=(wagePerHr*fullDayHr);
 								System.out.println("daily_wage="+daily_wage);
-								total_wage=(total_wage+daily_wage);
+								total_wage+=daily_wage;
 								work_hrs=work_hrs+8;
 								day_count++;
 							}else{
-								System.out.println("Employee is present and hrs limited to"+(100-work_hrs)+" only");
-								daily_wage=(wagePerHr*(100-work_hrs));
+								System.out.println("Employee is present and hrs limited to"+(totalWorkHrs-work_hrs)+" only");
+								daily_wage=(wagePerHr*(totalWorkHrs-work_hrs));
                                 total_wage+=daily_wage;
-                                day_count++;
-                                work_hrs=(work_hrs+(100-work_hrs));
+                                work_hrs=(work_hrs+(totalWorkHrs-work_hrs));
+								day_count++;
 							}
 							break;
 						case "part_time":
-							if (work_hrs <= 96 ){
-								System.out.println("Employee is present and is a part time");
+							if (work_hrs <= (totalWorkHrs-4) ){
+								System.out.println("Employee is present and is a part time on day"+day_count);
 								daily_wage=(wagePerHr*halfDayHr);
 								System.out.println("daily_wage="+daily_wage);
-								total_wage=(total_wage+daily_wage);
+								total_wage+=daily_wage;
 								work_hrs=work_hrs+8;
 								day_count++;
 							}else{
-								System.out.println("Employee is present and hrs limited to"+(100-work_hrs)+" only");
-								daily_wage=(wagePerHr*(100-work_hrs));
+								System.out.println("Employee is present and hrs limited to"+(totalWorkHrs-work_hrs)+" only");
+								daily_wage=(wagePerHr*(totalWorkHrs-work_hrs));
                                 total_wage+=daily_wage;
-                                day_count++;
-                                work_hrs=(work_hrs+(100-work_hrs));
+                                work_hrs=(work_hrs+(totalWorkHrs-work_hrs));
+								day_count++;
 							}
 							break;
 					}

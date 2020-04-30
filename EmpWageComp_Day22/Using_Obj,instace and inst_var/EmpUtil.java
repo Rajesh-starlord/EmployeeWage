@@ -99,7 +99,7 @@ class Employee{
 					}
 					switch(emp_type){
 						case "full_time":
-							if (work_hrs <= 92 ){
+							if (work_hrs <= (totalWorkHrs-8) ){
 								System.out.println("Employee is present and is a full time on day"+day_count);
 								daily_wage=(wagePerHr*fullDayHr);
 								System.out.println("daily_wage="+daily_wage);
@@ -109,17 +109,17 @@ class Employee{
 								addWage(day,daily_wage);
 								day_count++;
 							}else{
-								System.out.println("Employee is present and hrs limited to"+(100-work_hrs)+" only");
-								daily_wage=(wagePerHr*(100-work_hrs));
+								System.out.println("Employee is present and hrs limited to"+(totalWorkHrs-work_hrs)+" only");
+								daily_wage=(wagePerHr*(totalWorkHrs-work_hrs));
                                 total_wage+=daily_wage;
-                                work_hrs=(work_hrs+(100-work_hrs));
+                                work_hrs=(work_hrs+(totalWorkHrs-work_hrs));
 								day="Day"+day_count;
 								addWage(day,daily_wage);
 								day_count++;
 							}
 							break;
 						case "part_time":
-							if (work_hrs <= 96 ){
+							if (work_hrs <= (totalWorkHrs-4) ){
 								System.out.println("Employee is present and is a part time on day"+day_count);
 								daily_wage=(wagePerHr*halfDayHr);
 								System.out.println("daily_wage="+daily_wage);
@@ -129,11 +129,11 @@ class Employee{
 								addWage(day,daily_wage);
 								day_count++;
 							}else{
-								System.out.println("Employee is present and hrs limited to"+(100-work_hrs)+" only");
-								daily_wage=(wagePerHr*(100-work_hrs));
+								System.out.println("Employee is present and hrs limited to"+(totalWorkHrs-work_hrs)+" only");
+								daily_wage=(wagePerHr*(totalWorkHrs-work_hrs));
                                 total_wage+=daily_wage;
 								day="Day"+day_count;
-                                work_hrs=(work_hrs+(100-work_hrs));
+                                work_hrs=(work_hrs+(totalWorkHrs-work_hrs));
 								addWage(day,daily_wage);
 								day_count++;
 							}
