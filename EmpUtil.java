@@ -50,9 +50,15 @@ class Employee{
 	//prints daily_wage
 	public void printDailyWage(){
 		Iterator itr=WageData.iterator();
+		int count=0;
 		while(itr.hasNext()){
+			count+=1;
 			Data data=(Data)itr.next();
-			System.out.println(data.day+":"+data.daily_wage);
+			if(count > 9 ){
+				System.out.println(data.day+" :  "+data.daily_wage);
+			}else{
+				System.out.println(data.day+"  :  "+data.daily_wage);
+			}
 		}
 	}
 	
@@ -103,7 +109,12 @@ class Employee{
 			   break;
 			}//Switch
 		}//while
-		printDailyWage();
+		System.out.println("-----------------------");
+		System.out.println("DAY"+"   :  "+"DAILYWAGE");
+		System.out.println("-----------------------");
+		printDailyWage();//calling printDaily wage method
+		System.out.println("=======================");
 		print(total_wage,work_hrs);//send to Employee and print monthly wage
+		System.out.println("=======================");
 	}//empWage
 }//class
