@@ -63,7 +63,7 @@ class Employee{
 	}
 	
 	//calculating employee wage
-	public void empWage(){
+	public void calEmpWage(){
 		while(day_count <= total_work_day && work_hrs < total_work_hrs){
         double attCheck=Math.random();
         if(attCheck>0.5){
