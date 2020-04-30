@@ -2,7 +2,6 @@
 public class Charge{
 	private final double rx,ry;
 	private final double q;
-	
 	public Charge(double x0, double y0, double q0){
 		rx = x0;
 		ry = y0;
@@ -17,7 +16,6 @@ public class Charge{
 	public String toString(){
 		return q +" at " + "("+ rx + "." + ry +")";
 	}
-	
 	public static void main(String[] args){
 		double x = Double.parseDouble(args[0]);
 		double y = Double.parseDouble(args[1]);
