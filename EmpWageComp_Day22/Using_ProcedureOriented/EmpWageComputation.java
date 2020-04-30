@@ -4,14 +4,14 @@
 class EmpWageComputation{
 	//variables
 	public static final int full_day_hr=8;
-    public static final int half_day_hr=4;
+   public static final int half_day_hr=4;
 
-    static String emp_status="";
-    static String emp_type="";
-    static int day_count=1;  
-    static int total_wage=0;
-    static int daily_wage=0;
-    static int work_hrs=0;
+   static String emp_status="";
+   static String emp_type="";
+   static int day_count=1;
+   static int total_wage=0;
+   static int daily_wage=0;
+   static int work_hrs=0;
 	//function to claculate emp wage of a company:
 	public static void calEmpWage(String company, int  wage_per_hr, int total_work_day, int total_work_hrs){
 		System.out.println("============"+company+"============");
@@ -58,7 +58,7 @@ class EmpWageComputation{
 		System.out.println("========================");
 		System.out.println("monthly_wage="+total_wage);
 		System.out.println("total_work_hrs="+work_hrs);
-		day_count=1;  
+		day_count=1;
 		total_wage=0;
 		daily_wage=0;
 		work_hrs=0;
@@ -66,8 +66,8 @@ class EmpWageComputation{
 	
 	//main method
    public static void main(String[] args)throws Exception{
-    System.out.println("Welcome to Employee wage computation program");
-	calEmpWage("INDIAN-OIL",20,5,45);//function call
-	calEmpWage("ZENX",12,7,35);
+    	System.out.println("Welcome to Employee wage computation program");
+		calEmpWage("INDIAN-OIL",20,5,45);//function call
+		calEmpWage("ZENX",12,7,35);
    }//main
 }//class

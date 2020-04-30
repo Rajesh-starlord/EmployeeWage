@@ -4,8 +4,8 @@
 class EmployeeWage{
 	
 	//class variables
-    private static final int fullDayHr=8;
-    private static final int halfDayHr=4;
+   private static final int fullDayHr=8;
+   private static final int halfDayHr=4;
 	private static int wagePerHr=20;
 	private static int totalWorkHrs=10;
 	private static int totalWorkDays=20;
@@ -64,8 +64,8 @@ class EmployeeWage{
 							}else{
 								System.out.println("Employee is present and hrs limited to"+(totalWorkHrs-work_hrs)+" only");
 								daily_wage=(wagePerHr*(totalWorkHrs-work_hrs));
-                                total_wage+=daily_wage;
-                                work_hrs=(work_hrs+(totalWorkHrs-work_hrs));
+                        total_wage+=daily_wage;
+                        work_hrs=(work_hrs+(totalWorkHrs-work_hrs));
 								day_count++;
 							}
 							break;
@@ -80,8 +80,8 @@ class EmployeeWage{
 							}else{
 								System.out.println("Employee is present and hrs limited to"+(totalWorkHrs-work_hrs)+" only");
 								daily_wage=(wagePerHr*(totalWorkHrs-work_hrs));
-                                total_wage+=daily_wage;
-                                work_hrs=(work_hrs+(totalWorkHrs-work_hrs));
+                        total_wage+=daily_wage;
+                        work_hrs=(work_hrs+(totalWorkHrs-work_hrs));
 								day_count++;
 							}
 							break;
