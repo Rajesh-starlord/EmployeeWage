@@ -1,8 +1,8 @@
 import java.util.*;
 class Employee{
 	//variables
-	private static final int fullDayHr=8;
-   	private static final int halfDayHr=4;
+	private static final int FULL_DAY_HR=8;
+   	private static final int HALF_DAY_HR=4;
 	private static int wagePerHr=20;
 	private static int totalWorkHrs=100;
 	private static int totalWorkDays=20;
@@ -81,7 +81,7 @@ class Employee{
 			case "full_time":
 				if (work_hrs <= (totalWorkHrs-8) ){
 					System.out.println("Employee is present and is a full time on day"+day_count);
-					daily_wage=(wagePerHr*fullDayHr);
+					daily_wage=(wagePerHr*FULL_DAY_HR);
 					total_wage+=daily_wage;
 					work_hrs=work_hrs+8;
 					day="Day"+day_count;
@@ -100,7 +100,7 @@ class Employee{
 			case "part_time":
 				if (work_hrs <= (totalWorkHrs-4) ){
 					System.out.println("Employee is present and is a part time on day"+day_count);
-					daily_wage=(wagePerHr*halfDayHr);
+					daily_wage=(wagePerHr*HALF_DAY_HR);
 					total_wage+=daily_wage;
 					work_hrs=work_hrs+8;
 					day="Day"+day_count;
