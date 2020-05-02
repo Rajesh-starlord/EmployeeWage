@@ -2,7 +2,6 @@ import java.util.*;
 /*Employee class
 *all utilities of employee defined here
 */
-
 class Employee implements WageCal{
 	//class variables
 	private static final int FULL_DAY_HR=8;

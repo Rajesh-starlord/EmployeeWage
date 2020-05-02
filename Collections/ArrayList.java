@@ -1,6 +1,6 @@
-//import java.util.ArrayList;  
+import java.util.ArrayList;  
 import java.util.Iterator;
-class ArrayList{  
+class ArrayListTest{  
 	public static void main(String args[]){  
 		ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
 		list.add("Raj");//Adding object in arraylist  

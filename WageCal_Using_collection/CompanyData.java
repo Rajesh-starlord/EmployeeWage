@@ -1,13 +1,13 @@
 import java.util.*;
 //data class to store daily wages
 class CompanyData{
-	String company;
-	int daily_wage;
-	int totalWage;
-	int totalWorkHr;
-	int empWorkHr;
-	int totalWorkDays;
-	int wagePerHr;
+	private String company;
+	private int daily_wage;
+	private int totalWage;
+	private int totalWorkHr;
+	private int empWorkHr;
+	private int totalWorkDays;
+	private int wagePerHr;
 	ArrayList<DailyData> WageData=new ArrayList<DailyData>();
 	CompanyData(String company, ArrayList<DailyData> daily_wage, int totalWage, int totalWorkDays, int totalWorkHr, int empWorkHr, int wagePerHr){
 		this.company = company;
