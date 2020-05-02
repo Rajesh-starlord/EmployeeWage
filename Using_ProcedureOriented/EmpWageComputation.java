@@ -2,18 +2,17 @@
 *Using basic_programming constructs(procedure oriented):
 */
 class EmpWageComputation{
-	//variables
+
 	public static final int FULL_DAY_HR=8;
 	public static final int HALF_DAY_HR=4;
 
-	static String emp_status="";
-	static String emp_type="";
-	static int day_count=1;
-	static int total_wage=0;
-	static int daily_wage=0;
-	static int work_hrs=0;
-	//function to claculate emp wage of a company:
 	public static void calEmpWage(String company, int  wage_per_hr, int total_work_day, int total_work_hrs){
+		String emp_type="";
+		String emp_status="";
+		int day_count=1;
+		int total_wage=0;
+		int daily_wage=0;
+		int work_hrs=0;
 		System.out.println("============"+company+"============");
 		while(day_count<=total_work_day && work_hrs<total_work_hrs){
 			double attCheck=Math.random();
@@ -58,10 +57,6 @@ class EmpWageComputation{
 		System.out.println("========================");
 		System.out.println("monthly_wage="+total_wage);
 		System.out.println("total_work_hrs="+work_hrs);
-		day_count=1;
-		total_wage=0;
-		daily_wage=0;
-		work_hrs=0;
 	}//function
 	
 	//main method
