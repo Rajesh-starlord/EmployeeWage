@@ -2,7 +2,8 @@ import java.util.*;
 /*Employee class
 *all utilities of employee defined here
 */
-class Employee{
+
+class Employee implements WageCal{
 	//class variables
 	private static final int FULL_DAY_HR=8;
 	private static final int HALF_DAY_HR=4;
@@ -74,9 +75,10 @@ class Employee{
 			Data.printData();
 		}
 	}
-
-	//calculating employee wage
-	final void calEmpWage(){
+	/*
+	@Override calEmpWage method
+	*/
+	public void calEmpWage(){
 		while(day_count<=totalWorkDays && work_hrs<totalWorkHrs){
 			double attCheck=Math.random();
 			if(attCheck>0.5){
