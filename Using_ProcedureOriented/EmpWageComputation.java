@@ -6,9 +6,9 @@ class EmpWageComputation{
 	public static final int FULL_DAY_HR=8;
 	public static final int HALF_DAY_HR=4;
 
-	public static void calEmpWage(String company, int  wage_per_hr, int total_work_day, int total_work_hrs){
-		String emp_type="";
+	public static void calEmpWage(String company, int  wage_per_hr, int total_work_day, int total_work_hrs)
 		String emp_status="";
+		String emp_type="";
 		int day_count=1;
 		int total_wage=0;
 		int daily_wage=0;
@@ -22,7 +22,7 @@ class EmpWageComputation{
 				emp_status="absent";
 			}
 			switch(emp_status){
-				case "present"://check emp is part time or full time
+				case "present":
 					double category=Math.random();
 					if (category>0.5){
 						emp_type="full_time";
@@ -58,11 +58,9 @@ class EmpWageComputation{
 		System.out.println("monthly_wage="+total_wage);
 		System.out.println("total_work_hrs="+work_hrs);
 	}//function
-	
-	//main method
    public static void main(String[] args)throws Exception{
     	System.out.println("Welcome to Employee wage computation program");
-		calEmpWage("INDIAN-OIL",20,5,45);//function call
-		calEmpWage("ZENX",12,7,35);
+	calEmpWage("INDIAN-OIL",20,5,45);//function call
+	calEmpWage("ZENX",12,7,35);
    }//main
 }//class
