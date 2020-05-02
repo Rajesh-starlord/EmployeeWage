@@ -38,7 +38,7 @@ class CompanyData{
 		System.out.println("-----------------------");
 		printDailyWage();//calling printDaily wage method
 		System.out.println("=======================");
-      	System.out.println("total_work_hrs="+totalWorkHr+"hrs");
+      	System.out.println("Max_work_hrs="+totalWorkHr+"hrs");
 		System.out.println("Employee worked="+empWorkHr+"hrs");
 		System.out.println("Wage per hr for an Employee="+wagePerHr);
 		System.out.println("monthly_wage="+totalWage);
