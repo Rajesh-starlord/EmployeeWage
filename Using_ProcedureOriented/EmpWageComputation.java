@@ -63,8 +63,6 @@ class EmpWageComputation{
 		daily_wage=0;
 		work_hrs=0;
 	}//function
-	
-	//main method
    public static void main(String[] args)throws Exception{
     	System.out.println("Welcome to Employee wage computation program");
 		calEmpWage("INDIAN-OIL",20,5,45);//function call
