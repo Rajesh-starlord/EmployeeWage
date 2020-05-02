@@ -1,13 +1,13 @@
 import java.util.*;
 //data class to store daily wages
 class CompanyData{
-	String company;
-	int daily_wage;
-	int totalWage;
-	int totalWorkHr;
-	int empWorkHr;
-	int totalWorkDays;
-	int wagePerHr;
+	private String company;
+	private int daily_wage;
+	private int totalWage;
+	private int totalWorkHr;
+	private int empWorkHr;
+	private int totalWorkDays;
+	private int wagePerHr;
 	ArrayList<DailyData> WageData=new ArrayList<DailyData>();
 	CompanyData(String company, ArrayList<DailyData> daily_wage, int totalWage, int totalWorkDays, int totalWorkHr, int empWorkHr, int wagePerHr){
 		this.company = company;
@@ -38,7 +38,7 @@ class CompanyData{
 		System.out.println("-----------------------");
 		printDailyWage();//calling printDaily wage method
 		System.out.println("=======================");
-      	System.out.println("total_work_hrs="+totalWorkHr+"hrs");
+      	System.out.println("Max_work_hrs="+totalWorkHr+"hrs");
 		System.out.println("Employee worked="+empWorkHr+"hrs");
 		System.out.println("Wage per hr for an Employee="+wagePerHr);
 		System.out.println("monthly_wage="+totalWage);
