@@ -75,7 +75,7 @@ class EmployeeWage{
 								daily_wage=(wagePerHr*HALF_DAY_HR);
 								System.out.println("daily_wage="+daily_wage);
 								total_wage+=daily_wage;
-								work_hrs=work_hrs+8;
+								work_hrs=work_hrs+4;
 								day_count++;
 							}else{
 								System.out.println("Employee is present and hrs limited to"+(totalWorkHrs-work_hrs)+" only");
